@@ -2,6 +2,9 @@ from entities.Card import Card
 from entities.Deck import Deck
 
 class Player():
+    """
+    A siimple Player class to store its name and deck of cards
+    """
 
     def __init__(self, nickname: str=None, deck: Deck=None):
         self.nickname = nickname
@@ -40,6 +43,12 @@ class Player():
             self.__deck = None
     
     def sum_points(self) -> int:
+        """
+        Sum the quantity of player's points
+
+        Returns:
+            int: the total player's points
+        """
         return sum([card.rank_value for card in self.deck.cards])
     
     def __str__(self):
