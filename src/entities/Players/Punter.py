@@ -3,9 +3,6 @@ from entities.Players.Palyer import Player
 class Punter(Player):
     """
     A more specific Player class, where the player has chips to bet
-
-    Args:
-        Player ([type]): [description]
     """
 
     def __init__(self, chips_amount: str, nickname: str=None, deck: str=None):
